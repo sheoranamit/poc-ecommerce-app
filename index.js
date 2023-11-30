@@ -25,7 +25,7 @@ app.get('/api/products', async (req, res) => {
 
 app.get('/api/products/:id', async (req, res) => {
   const productId = req.params.id;
-
+  console.log(productId);
   try {
     const response = await axios.get(`https://fakestoreapi.com/products/${productId}`);
     res.json(response.data);
