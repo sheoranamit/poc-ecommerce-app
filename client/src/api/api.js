@@ -14,7 +14,7 @@ export const getAllProducts = async () => {
 
 export const getProductById = async (id) => {
   try {
-    const response = await axios.get(`${baseURL}/products/${id}`);
+    const response = await axios.get(`${baseURL}/api/products/${id}`);
     return response.data;
   } catch (error) {
     console.error(`Error fetching product with ID ${id}:`, error.message);
